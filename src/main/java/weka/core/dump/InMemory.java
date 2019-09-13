@@ -18,10 +18,9 @@
  * Copyright (C) 2019 University of Waikato, Hamilton, NZ
  */
 
-package weka.classifiers.meta;
+package weka.core.dump;
 
 import weka.core.Instances;
-import weka.core.dump.AbstractDumper;
 
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
