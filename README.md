@@ -8,6 +8,8 @@ pipelines (aka `weka.filters.MultiFilter`), classifiers or clusterers.
 * Dumper schemes
 
   * `weka.core.dump.Null` -- dummy, does nothing
+  * `weka.core.dump.InMemory` -- not for GUI use, but API use, as it notifies
+    registered listeners whenever the data changes.
 
 * Integration
 
