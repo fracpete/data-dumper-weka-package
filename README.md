@@ -21,6 +21,26 @@ pipelines (aka `weka.filters.MultiFilter`), classifiers or clusterers.
   * `weka.filters.Dumper`
 
 
+## Example usage:
+
+When used in conjunction with the `weka.filters.MultiFilter`, it is possible to output
+the data at any given stage in the filter pipeline by inserting `weka.filters.Dumper`
+instances where required. Here is an example layout:
+
+```
+- weka.filters.MultiFilter
+  |
+  + weka.filters.Dumper -dumper "weka.core.dump.SaveToDisk -output-file ./1-initial.arff"
+  |
+  + weka.filters.unsupervised.attribute.AddNoise"
+  |
+  + weka.filters.Dumper -dumper "weka.core.dump.SaveToDisk -output-file ./2-with_noise.arff"
+  |
+  + weka.filters.unsupervised.attribute.Normalize"
+  |
+  + weka.filters.Dumper -dumper "weka.core.dump.SaveToDisk -output-file ./3-normalized.arff"
+```
+
 ## Releases
 
 * [2019.9.13](https://github.com/fracpete/data-dumper-weka-package/releases/download/v2019.9.13/data-dumper-2019.9.13.zip)
