@@ -278,6 +278,7 @@
           <subpackages>weka</subpackages>
           <show>public</show>
           <outputDirectory>${project.basedir}/doc</outputDirectory>
+          <additionalparam>-Xdoclint:none</additionalparam>
         </configuration>
         <executions>
           <execution>
