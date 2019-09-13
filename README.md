@@ -10,6 +10,9 @@ pipelines (aka `weka.filters.MultiFilter`), classifiers or clusterers.
   * `weka.core.dump.Null` -- dummy, does nothing
   * `weka.core.dump.InMemory` -- not for GUI use, but API use, as it notifies
     registered listeners whenever the data changes.
+  * `weka.core.dump.SaveToDisk` -- stores the data in the specified file on disk 
+    (auto-detects file format based on extension); allows appending a timestamp
+    to output separate files during cross-validation.
 
 * Integration
 
